@@ -1,4 +1,3 @@
-// src/components/home/Home.tsx
 import React, { useState } from 'react';
 import Input from '../../components/input/Input';
 import ProductCard from '../../components/productCard/ProductCard';
@@ -39,7 +38,7 @@ const Home: React.FC = () => {
             {visibleCount < filteredProducts.length && (
                 <button
                     onClick={loadMoreProducts}
-                    className="bg-purple-600 text-white py-2 px-4 rounded mt-4"
+                    className="bg-purple-600 text-white py-2 px-4 rounded mt-10"
                 >
                     مشاهده بیشتر
                 </button>

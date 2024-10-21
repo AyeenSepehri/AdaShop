@@ -1,4 +1,3 @@
-// src/components/FilterInput.tsx
 import React from 'react';
 
 interface FilterInputProps {
