@@ -38,15 +38,15 @@ const Cart: React.FC = () => {
             <div className="grow">
                 {products.map((product, index) => (
                     <div key={index} className="mb-5">
-                        <CartShoppingCard productData={product} />
+                        <CartShoppingCard productData={product}/>
                     </div>
                 ))}
             </div>
 
             {/* Footer with total items and price */}
-            <div className="flex justify-between items-center p-4 bg-gray-50 shadow-lg mt-4">
-                <div className="flex flex-col gap-2">
-                    <p className="text-md text-fuchsia-500 font-semibold">
+            <div className="flex flex-col md:flex-row justify-between items-center p-4 bg-gray-50 shadow-lg mt-4">
+                <div className="flex flex-col gap-2 mb-4 md:mb-0 text-center md:text-start">
+                    <p className="text-sm md:text-md text-fuchsia-500 font-semibold">
                         تکمیل و ادامه فرآیند پرداخت {totalItems} کالا از {products.length} محصول انتخاب شده
                     </p>
                     <p className="text-lg text-purple-700 font-semibold">
@@ -55,12 +55,13 @@ const Cart: React.FC = () => {
                 </div>
                 <button
                     onClick={handleOpenModal}
-                    className="flex items-center gap-5 px-3.5 py-2.5 bg-purple-700 text-white rounded text-sm"
+                    className="flex items-center gap-2 md:gap-5 px-3 py-2 bg-purple-700 text-white rounded text-sm md:text-base"
                 >
                     تکمیل و پرداخت
-                    <img src={"/icons/WalletIcon.svg"} alt="wallet icon" className="h-8 w-8" />
+                    <img src={"/icons/WalletIcon.svg"} alt="wallet icon" className="h-6 w-6 md:h-8 md:w-8"/>
                 </button>
             </div>
+
             {/* Show Modal if state is true */}
             {showModal && (
                 <Modal title="وضعیت پرداخت" width={504} onClose={handleCloseModal} isOpen={showModal}>

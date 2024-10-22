@@ -27,7 +27,7 @@ const CartShoppingCard: React.FC<ProductDataTypes>  = ({productData} : ProductDa
 
     const totalPrice = price * quantity;
     return (
-        <div className="flex justify-between items-center px-12 py-5 border-2 border-purple-700 rounded">
+        <div className="md:flex justify-between items-center px-12 py-5 border-2 border-purple-700 rounded">
             <div className="flex items-center justify-center gap-5">
                 <img src={image} alt="product img" className="h-28"/>
                 <div className="flex flex-col items-center text-center gap-3">

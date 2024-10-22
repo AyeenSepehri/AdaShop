@@ -19,7 +19,7 @@ const FilterInput: React.FC<FilterInputProps> = ({ value, onChange }) => {
                 value={value}
                 onChange={onChange}
                 placeholder="جستجو کنید..."
-                className="w-full h-14 pl-12 pr-4 border-2 border-fuchsia-500 rounded-lg focus:border-purple-700 outline-none transition-colors duration-200 bg-purple-100"
+                className="w-full h-12 sm:h-14 pl-10 sm:pl-12 pr-4 border-2 border-fuchsia-500 rounded-lg focus:border-purple-700 outline-none transition-colors duration-200 bg-purple-100"
             />
         </div>
     );

@@ -17,9 +17,9 @@ const Layout = ({children}: { children: React.ReactNode }) => {
     const isCartPage = location.pathname === "/cart";
 
     return (
-        <div className="container mx-auto py-10 px-10 text-center w-2/3">
-            <h1 className="text-4xl font-bold mb-8 text-purple-700">ADA SHOP</h1>
-            <div className="flex justify-end gap-4 mt-16 mb-4">
+        <div className="container mx-auto py-10 px-5 md:px-10 text-center w-full md:w-2/3">
+            <h1 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-purple-700">ADA SHOP</h1>
+            <div className="flex sm:justify-end justify-center gap-4 mt-12 md:mt-16 mb-4">
                 <Link
                     to={"/"}
                     className={`${

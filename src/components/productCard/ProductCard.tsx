@@ -28,8 +28,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, image }) => 
 
     return (
         <div className="p-4 hover:shadow-lg">
-            <img src={image} alt={name} className="mb-4 h-48 mx-auto"/>
-            <h2 className="text-start text-lg text-purple-700 font-semibold mb-2">{name}</h2>
+            <img src={image} alt={name} className="mb-4 h-40 sm:h-48 mx-auto"/>
+            <h2 className="text-start text-lg sm:text-xl text-purple-700 font-semibold mb-2">{name}</h2>
             <p className="text-end text-fuchsia-500 font-semibold mb-2">{price.toLocaleString()} تومان</p>
 
             {itemsNumber === 0 ? (

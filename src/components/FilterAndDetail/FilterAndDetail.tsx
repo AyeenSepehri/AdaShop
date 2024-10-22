@@ -34,15 +34,15 @@ const FilterAndDetail: React.FC<FilterAndDetailProps> = ({ selectedFilter, setSe
     }, [dropdownRef]);
 
     return (
-        <div className="w-full flex justify-between items-center relative">
-            <p className={`${totalItems === 0 && "invisible"} text-fuchsia-500 font-semibold`}>
-                {totalItems} محصول در سبد خرید شما وجود دارد
-            </p>
-
-            {/* Filter Button */}
+        <div className={`${totalItems === 0 ? "justify-end" : "justify-between"} w-full flex flex-col sm:flex-row items-center relative`}>
+            {totalItems !== 0 && (
+                <p className={`text-fuchsia-500 font-semibold mb-4 sm:mb-0`}>
+                    {totalItems} محصول در سبد خرید شما وجود دارد
+                </p>
+            )}
             <button
+                onClick={() => setIsDropdownOpen((prev) => !prev)}
                 className="rounded flex justify-center items-center gap-2 border border-fuchsia-500 text-fuchsia-500 font-semibold px-3 py-2 relative"
-                onClick={() => setIsDropdownOpen((prev) => !prev)} // Toggle dropdown visibility
             >
                 فیلتر ها
                 <img src="/icons/FilterIcon.svg" alt="filterIcon" />
@@ -50,7 +50,10 @@ const FilterAndDetail: React.FC<FilterAndDetailProps> = ({ selectedFilter, setSe
 
             {/* Dropdown Menu */}
             {isDropdownOpen && (
-                <div ref={dropdownRef} className="absolute top-12 left-0 w-40 bg-white shadow-md rounded-lg z-10">
+                <div
+                    ref={dropdownRef}
+                    className={`absolute top-full w-40 bg-white shadow-md rounded-lg z-10 mt-1 md:left-10 sm:left-1/2 sm:transform sm:-translate-x-1/2`}
+                >
                     <ul className="flex flex-col">
                         <li
                             onClick={() => handleFilterSelect("همه")}
