@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Ada Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ada Shop is a React.js-based e-commerce web application that allows users to browse, filter, and add products to their cart. The project uses React, TypeScript, Tailwind CSS, and Redux for state management. This project also includes features like product sorting, cart management, and product filtering.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Usage](#usage)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Product Listing**: Displays a list of products with mock data, 6 items per page, and a "Load More" button to display additional products.
+- **Filtering**: Users can filter products by their names using an input field.
+- **Sorting**: Users can sort products by three options:
+  1. Default (All Products)
+  2. Cheapest to Most Expensive
+  3. Most Expensive to Cheapest
+- **Cart Management**: Displays the total number of selected products in the cart.
+- **Dropdown Menu**: The sorting dropdown can be toggled, and closes automatically when clicking outside of it.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **React** (version 18.3.1)
+- **TypeScript**: Strict type checking for a better development experience.
+- **Tailwind CSS**: For fast and efficient styling.
+- **Redux Toolkit**: For global state management, particularly managing products in the cart.
+- **dndkit**: Drag-and-drop functionality for managing products (planned future feature).
+- **React Hooks**: Used extensively for state and effect management.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+- **Filtering Products**: Type into the input field to filter the product list based on product names.
+- **Sorting Products**: Click the "فیلتر ها" (Filter) button to open the dropdown and select:
+1. همه: Displays all products in the default order.
+2. ارزان ترین: Sorts products from cheapest to most expensive.
+3. گران ترین: Sorts products from most expensive to cheapest.
+- **Managing Cart**: The cart page displays the number of products added to the cart and calculate price and showing randomly statuses of payment with modal overlay.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
