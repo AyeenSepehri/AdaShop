@@ -1,16 +1,36 @@
-import React from 'react';
+import React,{useState} from 'react';
 import CartShoppingCard from "../../components/CartShoppingCard/CartShoppingCard";
 import {useSelector} from "react-redux";
 import {RootState} from "../../store/store";
+import Modal from "../../components/Modal/Modal";
+import RandomContent from "../../components/Modal/ModalContents/RandomContent";
 
 const Cart: React.FC = () => {
     const products = useSelector((state: RootState) => state.products);
+    const [showModal, setShowModal] = useState(false);
 
     // Calculate the total number of selected products
     const totalItems = products.reduce((total, product) => total + product.quantity, 0);
 
     // Calculate the total price of selected products (price * quantity)
     const totalPrice = products.reduce((total, product) => total + (product.price * product.quantity), 0);
+
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
+
+    // Function to close the modal
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    if (products.length === 0) {
+        return (
+            <div className="grid place-items-center text-purple-700 font-semibold">
+                سبد خرید شما در حال حاضر خالی است!
+            </div>
+        )
+    }
 
     return (
         <div className="flex flex-col justify-between min-h-[calc(75vh-4rem)]">
@@ -33,11 +53,20 @@ const Cart: React.FC = () => {
                         مبلغ پرداخت سفارش {totalPrice.toLocaleString()} تومان
                     </p>
                 </div>
-                <button className="flex items-center gap-5 px-3.5 py-2.5 bg-purple-700 text-white rounded text-sm">
+                <button
+                    onClick={handleOpenModal}
+                    className="flex items-center gap-5 px-3.5 py-2.5 bg-purple-700 text-white rounded text-sm"
+                >
                     تکمیل و پرداخت
                     <img src={"/icons/WalletIcon.svg"} alt="wallet icon" className="h-8 w-8" />
                 </button>
             </div>
+            {/* Show Modal if state is true */}
+            {showModal && (
+                <Modal title="وضعیت پرداخت" width={504} onClose={handleCloseModal} isOpen={showModal}>
+                    <RandomContent onClose={handleCloseModal}/>
+                </Modal>
+            )}
         </div>
     );
 };
