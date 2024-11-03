@@ -18,7 +18,7 @@ const Layout = ({children}: { children: React.ReactNode }) => {
 
     return (
         <div className="container mx-auto py-10 px-5 md:px-10 text-center w-full md:w-2/3">
-            <h1 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-purple-700">ADA SHOP</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-purple-700">AYEEN SHOP</h1>
             <div className="flex sm:justify-end justify-center gap-4 mt-12 md:mt-16 mb-4">
                 <Link
                     to={"/"}
